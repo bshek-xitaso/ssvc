@@ -76,6 +76,26 @@ try {
 }
 ```
 
+## Commit Messages
+
+Please use commit messages and pull request titles following
+[Conventional Commits](https://www.conventionalcommits.org/)
+when contributing to this project.
+
+You can use a tool such as [commitlint](https://commitlint.js.org/)
+to check your commit locally, e.g., by running:
+
+    commitlint --default-config --last
+
+to verify the latest commit. More options can be found with `--help`.
+
+The CI workflow `pre-checks` will also ensure that PR titles and commit
+messages in pushes to `main` conform to Conventional Commits.
+
+In addition, warnings in the pipeline are emitted if the commits contained
+within a PR do not adhere to Conventional Commits; these warnings do not fail
+the pipeline.
+
 ## License
 
 Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) file for details.
